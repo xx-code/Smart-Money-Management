@@ -2,4 +2,9 @@
 
 Smart Money est une application utilisant python, numpy et des techniques d'intélligences artificielle pour m'aider en tant qu'étudiant pour pouvoir bien gérer mon argent.
 
+## Requirment
+
+- numpy
+- pandas
+
 ## Comment utiliser son projet ?
