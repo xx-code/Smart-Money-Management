@@ -6,5 +6,8 @@ Smart Money est une application utilisant python, numpy et des techniques d'int√
 
 - numpy
 - pandas
+- google-api-python-client
+- google-auth-httplib2
+- google-auth-oauthlib
 
 ## Comment utiliser son projet ?
