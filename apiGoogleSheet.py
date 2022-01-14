@@ -48,9 +48,20 @@ def is_downloaded_csv_google_sheet(credentials, spreadsheet_id, spreadsheet_rang
 def convert_spreadsheet_to_csv(spreadsheet):
     csv_file = 'data.csv'
 
-    with open(csv_file, 'w') as f:
+    if os.path.exists(csv_file):
+        os.remove(csv_file)
+
+    with open(csv_file, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerows(spreadsheet.get('values'))
+        data = spreadsheet.get('values')
+        for row in data:
+            try:
+               price = row[4] 
+               price = float(price.replace(',', '.'))
+               row[4] = price
+            except:
+                pass
+            writer.writerow(row)
     f.close()
 
 
